@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Flexbox container */
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+/* Category panel */
+.category-panel {
+    width: 250px; /* Fixná šírka pre panel kategórií */
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.category-panel h2 {
+    margin-top: 0;
+}
+
+.category-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category-panel ul li {
+    margin: 10px 0;
+}
+
+.category-panel ul li a {
+    text-decoration: none;
+    color: #000; /* Čierne písmo */
+    font-weight: bold;
+    display: block; /* Blokový prvok */
+    padding: 10px; /* Pridanie paddingu pre lepší vzhľad */
+    background-color: #fff; /* Biele pozadie */
+    border-radius: 8px; /* Zaoblené rohy */
+}
+
+.category-panel ul li a:hover {
+    background-color: #ccc; /* Sivé pozadie pri hover */
+}
+
+/* Product listing */
+.products {
+    flex: 1; /* Flexibilná šírka pre sekciu produktov */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Search section */
+.search-container {
+    margin: 20px 0;
+    width: 100%; /* Zmena šírky panelu na vyhľadávanie */
+}
+
+.search-container input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-container input[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff; /* Biele pozadie */
+    color: #000; /* Čierne písmo */
+    border: 1px solid #ddd; /* Hranica */
+    cursor: pointer;
+    border-radius: 8px; /* Zaoblené rohy */
+}
+
+.search-container input[type="submit"]:hover {
+    background-color: #ccc; /* Sivé pozadie pri hover */
+}
+
+/* Product styling */
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Rozmiestni produkty rovnomerne */
+}
+
+.products-list .product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px; /* Oddelenie medzi produktmi */
+    border-radius: 5px;
+    width: calc(33.33% - 20px); /* Šírka produktu (33.33% - 20px medzera medzi produktmi) */
+    box-sizing: border-box;
+}
+
+.products-list .product img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Responsívne prispôsobenie počtu produktov v riadku */
+@media (max-width: 768px) {
+    .products-list .product {
+        width: calc(50% - 20px); /* Na menších obrazovkách len 2 produkty v riadku */
+    }
+}
+
+@media (max-width: 480px) {
+    .products-list .product {
+        width: 100%; /* Na veľmi malých obrazovkách jeden produkt na riadok */
+    }
+}
