@@ -4,17 +4,24 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
-
-form {
-    width: 50%;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.container {
+    display: flex;
+    flex-direction: row;
 }
-
-input[type="text"], input[type="file"], input[type="submit"] {
+.category-panel, .main {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border-right: 1px solid #ddd;
+}
+.category-panel h2, .main h2 {
+    margin-top: 0;
+}
+form {
+    margin-bottom: 20px;
+}
+input[type="text"], input[type="file"], input[type="submit"], select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -22,22 +29,55 @@ input[type="text"], input[type="file"], input[type="submit"] {
     border-radius: 3px;
     box-sizing: border-box;
 }
-
 input[type="submit"] {
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
 }
-
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
-
-.success-message {
-    display: none;
+.success-message, .error-message {
     margin-top: 10px;
     padding: 10px;
+    border-radius: 5px;
+}
+.success-message {
+    display: none;
     background-color: #5cb85c;
     color: #fff;
+}
+.error-message {
+    background-color: #ff0000;
+    color: #fff;
+}
+.delete-button, .edit-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.edit-button {
+    background-color: #ffc107;
+}
+.top-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 20px;
+}
+.top-buttons button {
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+.logout-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+.eshop-button {
+    background-color: #28a745;
+    color: #fff;
 }

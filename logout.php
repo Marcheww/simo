@@ -1,9 +1,9 @@
 <?php
-   session_start(); //otvorenie session
+   session_start(); 
 
-   unset($_SESSION["username"]); //vymazanie session
+   unset($_SESSION["username"]); 
    
    echo 'You have loggout and cleaned session';
 
-   header('Refresh: 2; URL = index.php'); // presmerovanie na prihlasenie
+   header('Refresh: 2; URL = index.php'); 
 ?>
